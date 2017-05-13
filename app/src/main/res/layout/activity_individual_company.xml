@@ -63,6 +63,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:fontFamily="sans-serif-condensed"
                 android:text="Interview Checklist"
                 android:textSize="16dp"
                 android:textColor="@color/black" />
@@ -93,6 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/button_Behavioral"
                 android:layout_centerInParent="true"
+                android:fontFamily="sans-serif-condensed"
                 android:text="Behavioral Questions"
                 android:textSize="16dp"
                 android:textColor="@color/black" />
@@ -122,6 +124,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/button_Technical"
                 android:layout_centerInParent="true"
+                android:fontFamily="sans-serif-condensed"
                 android:text="Technical Questions"
                 android:textSize="16dp"
                 android:textColor="@color/black" />
@@ -153,6 +156,7 @@
                 android:layout_centerInParent="true"
                 android:layout_below="@+id/button_Tips"
                 android:gravity="center"
+                android:fontFamily="sans-serif-condensed"
                 android:text="Interview Tips"
                 android:textSize="16dp"
                 android:textColor="@color/black" />

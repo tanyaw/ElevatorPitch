@@ -45,7 +45,8 @@
         <CheckBox
             android:id="@+id/ApplyCheckBox"
             android:text="Apply to Company"
-            android:textSize="18dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="19dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="15dp"
@@ -55,7 +56,8 @@
         <CheckBox
             android:id="@+id/SetUpCheckBox"
             android:text="Set-up Interview"
-            android:textSize="18dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="19dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="15dp"
@@ -65,7 +67,8 @@
         <CheckBox
             android:id="@+id/ResearchCheckBox"
             android:text="Research Company"
-            android:textSize="18dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="19dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="15dp"
@@ -75,7 +78,8 @@
         <CheckBox
             android:id="@+id/StudyCheckBox"
             android:text="Study"
-            android:textSize="18dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="19dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="15dp"
@@ -85,7 +89,8 @@
         <CheckBox
             android:id="@+id/InterviewCheckBox"
             android:text="Interview"
-            android:textSize="18dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="19dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="15dp"
@@ -95,7 +100,8 @@
         <CheckBox
             android:id="@+id/FollowUpCheckBox"
             android:text="Follow Up"
-            android:textSize="18dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="19dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="15dp"
@@ -105,7 +111,8 @@
         <CheckBox
             android:id="@+id/ThanksCheckBox"
             android:text="Thank you email's"
-            android:textSize="18dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="19dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="15dp"
@@ -113,6 +120,14 @@
             android:layout_height="wrap_content" />
 
     </LinearLayout>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary" />
 
     <LinearLayout
         android:id="@+id/StatusBar"
@@ -124,17 +139,25 @@
         <TextView
             android:id="@+id/StatusText"
             android:text="STATUS"
-            android:textSize="18dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginLeft="15dp"
+            android:textSize="19dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
             android:layout_weight="90"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/GoToTipsButton"
-            android:text="Go to Tips"
-            android:layout_weight="10"
+            android:text="To Tips"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="@color/colorPrimary"
+            android:layout_weight="20"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
