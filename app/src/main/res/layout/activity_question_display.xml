@@ -16,7 +16,7 @@
 
         <TextView
             android:id="@+id/PrepTimeText"
-            android:text="Prep Time"
+            android:text="Interview Q&amp;A"
             android:gravity="center"
             android:textSize="25dp"
             android:textColor="@color/colorPrimary"
@@ -75,10 +75,11 @@
         android:id="@+id/EditAnswerButton"
         android:text="Edit Answer"
         android:textSize="14dp"
-        android:layout_marginTop="3dp"
-        android:layout_weight="90"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="@color/colorPrimary"
+        android:layout_weight="50"
+        android:layout_margin="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -86,10 +87,11 @@
             android:id="@+id/NextQuestionButton"
             android:text="Next Question"
             android:textSize="14dp"
-            android:layout_marginTop="3dp"
-            android:layout_weight="90"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="@color/colorPrimary"
+            android:layout_weight="50"
+            android:layout_margin="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

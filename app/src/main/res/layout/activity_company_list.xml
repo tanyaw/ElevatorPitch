@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="twanwatanakool.elevatorpitches.CompanyList">
+    tools:context="twanwatanakool.elevatorpitches.CompanyList" >
 
     <LinearLayout
         android:id="@+id/CompanyListBar"
         android:orientation="horizontal"
         android:layout_weight="10"
         android:layout_width="match_parent"
-        android:layout_height="0dp">
+        android:layout_height="0dp" >
 
         <TextView
             android:id="@+id/CompanyListText"
@@ -34,22 +34,58 @@
         android:layout_weight="90"
         android:gravity="left"
         android:layout_width="match_parent"
-        android:layout_height="0dp">
+        android:layout_height="0dp" >
 
         <View
+            android:id="@+id/bar2"
             android:layout_width="fill_parent"
             android:layout_height="2dp"
-            android:background="@color/gray"/>
+            android:background="@color/gray" />
 
         <EditText
             android:id="@+id/AddCompany"
             android:text="Add Company..."
-            android:textStyle="bold"
-            android:textSize="19dp"
-            android:textColor="@color/gray"
-            android:layout_margin="15dp"
+            android:textSize="16dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#969696"
+            android:backgroundTint="#80000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
+        <View
+            android:id="@+id/bar"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray" />
+
+
+        <TextView
+            android:id="@+id/CompaniesTest"
+            android:text="COMPANIES"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="16dp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimary" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
 
     </LinearLayout>
 

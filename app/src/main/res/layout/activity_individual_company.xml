@@ -9,176 +9,155 @@
 
     <RelativeLayout
         android:id="@+id/CompanyTasks"
-        android:orientation="vertical"
-        android:layout_weight="90"
         android:layout_width="match_parent"
-        android:layout_height="0dp">
+        android:layout_height="0dp"
+        android:layout_weight="90"
+        android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/CompanyNameBar"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-
-            <!--
-            <Button
-                android:id="@+id/MenuButton"
-                android:layout_weight="10"
-                android:text="Home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            -->
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/CompanyName"
-                android:text="COMPANY 1"
-                android:gravity="center"
-                android:textSize="25dp"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:layout_margin="10dp"
-                android:layout_weight="80"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="COMPANY 1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25dp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <View
+            android:id="@+id/bar"
+            android:layout_below="@+id/CompanyNameBar"
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/gray"
-            android:layout_below="@+id/CompanyNameBar"/>
+            android:background="@color/gray" />
 
-        <LinearLayout
-            android:id="@+id/firstRow"
-            android:layout_width="match_parent"
+        <RelativeLayout
+            android:id="@+id/checkListLayout"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/CompanyNameBar"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp">
 
             <ImageButton
-                android:id="@+id/button_InterviewIcon"
-                android:background="@drawable/interviewIcon"
-                android:scaleType="fitCenter"
-                android:layout_margin="20dp"
+                android:id="@+id/button_CheckList"
+                android:background="@drawable/checklist"
                 android:layout_width="150dp"
-                android:layout_height="150dp" />
-
-            <ImageButton
-                android:id="@+id/button_InterviewIcon2"
-                android:background="@drawable/interviewIcon"
-                android:scaleType="fitCenter"
-                android:layout_margin="20dp"
-                android:layout_toRightOf="@+id/button_InterviewIcon"
-                android:layout_width="150dp"
-                android:layout_height="150dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/firstRowText"
-            android:layout_below="@+id/firstRow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="10dp">
+                android:layout_height="150dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitCenter" />
 
             <TextView
+                android:layout_below="@+id/button_CheckList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:text="Interview Checklist"
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textSize="16dp"
+                android:textColor="@color/black" />
+        </RelativeLayout>
 
-            <TextView
-                android:text="Technical Questions"
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/secondRow"
-            android:layout_width="match_parent"
+        <RelativeLayout
+            android:id="@+id/behavioralLayout"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/firstRowText"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:layout_below="@+id/CompanyNameBar"
+            android:layout_toRightOf="@+id/checkListLayout"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp">
 
             <ImageButton
-                android:id="@+id/button_InterviewIcon3"
+                android:id="@+id/button_Behavioral"
                 android:background="@drawable/interviewIcon"
-                android:scaleType="fitCenter"
-                android:layout_margin="20dp"
                 android:layout_width="150dp"
-                android:layout_height="150dp" />
-
-            <ImageButton
-                android:id="@+id/button_InterviewIcon4"
-                android:background="@drawable/interviewIcon"
-                android:scaleType="fitCenter"
-                android:layout_margin="20dp"
-                android:layout_toRightOf="@+id/button_InterviewIcon"
-                android:layout_width="150dp"
-                android:layout_height="150dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/secondRowText"
-            android:layout_below="@+id/secondRow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="10dp">
+                android:layout_height="150dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitCenter" />
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/button_Behavioral"
+                android:layout_centerInParent="true"
                 android:text="Behavioral Questions"
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textSize="16dp"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/technicalLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkListLayout"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/button_Technical"
+                android:background="@drawable/computer"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitCenter" />
 
             <TextView
-                android:text="Interview Tips"
-                android:textColor="@color/black"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/button_Technical"
+                android:layout_centerInParent="true"
+                android:text="Technical Questions"
+                android:textSize="16dp"
+                android:textColor="@color/black" />
+        </RelativeLayout>
 
-        <!--
-        <Button
-            android:id="@+id/InterviewChecklist"
-            android:text="Interview Checklist"
-            android:textSize="19dp"
-            android:textColor="#000000"
-            android:layout_below="@+id/firstRow"
+        <RelativeLayout
+            android:id="@+id/tipsLayout"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/behavioralLayout"
+            android:layout_toRightOf="@id/technicalLayout"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/TechQuestions"
-            android:text="Technical Questions"
-            android:textSize="19dp"
-            android:textColor="#000000"
-            android:layout_below="@+id/InterviewChecklist"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <ImageButton
+                android:id="@+id/button_Tips"
+                android:background="@drawable/tips"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitCenter" />
 
-        <Button
-            android:id="@+id/BehavioralQuestions"
-            android:text="Behavioral Questions"
-            android:textSize="19dp"
-            android:textColor="#000000"
-            android:layout_below="@+id/TechQuestions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/button_Tips"
+                android:gravity="center"
+                android:text="Interview Tips"
+                android:textSize="16dp"
+                android:textColor="@color/black" />
+        </RelativeLayout>
 
-        <Button
-            android:id="@+id/InterviewTips"
-            android:text="Interview Tips"
-            android:textSize="19dp"
-            android:textColor="#000000"
-            android:layout_below="@id/BehavioralQuestions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-            -->
     </RelativeLayout>
 
 </LinearLayout>
