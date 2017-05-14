@@ -8,6 +8,19 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".CompanyList">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,6 +32,8 @@
         <activity android:name=".IndividualCompany" />
         <activity android:name=".InterviewTips" />
         <activity android:name=".QuestionDisplay" />
+        <activity android:name=".BehavioralQuestion" />
+        <activity android:name=".TechnicalQuestion" />
     </application>
 
 </manifest>

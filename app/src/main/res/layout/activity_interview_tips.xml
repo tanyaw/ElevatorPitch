@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/background"
     tools:context="twanwatanakool.elevatorpitches.InterviewTips">
 
     <LinearLayout
@@ -42,8 +43,8 @@
             android:background="@color/gray" />
 
         <TextView
-            android:id="@+id/DressCode"
-            android:text="Dress Code"
+            android:id="@+id/DressAttire"
+            android:text="Dress Attire"
             android:fontFamily="sans-serif-condensed"
             android:textSize="19dp"
             android:textColor="@color/black"
@@ -54,8 +55,8 @@
             android:layout_height="wrap_content" />
 
         <TextView
-            android:id="@+id/RecruiterQs"
-            android:text="Questions to Ask Recruiter"
+            android:id="@+id/DataStructures"
+            android:text="Data Structures"
             android:textSize="19dp"
             android:fontFamily="sans-serif-condensed"
             android:textColor="@color/black"
@@ -66,8 +67,8 @@
             android:layout_height="wrap_content" />
 
         <TextView
-            android:id="@+id/Salary"
-            android:text="Negotiate Salary"
+            android:id="@+id/RecruiterQs"
+            android:text="Questions to Ask Recruiter"
             android:textSize="19dp"
             android:fontFamily="sans-serif-condensed"
             android:textColor="@color/black"

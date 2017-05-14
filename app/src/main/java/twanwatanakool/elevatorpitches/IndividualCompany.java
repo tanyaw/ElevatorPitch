@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 public class IndividualCompany extends AppCompatActivity {
@@ -26,7 +25,7 @@ public class IndividualCompany extends AppCompatActivity {
         ImageButton toBehavioralLayout = (ImageButton) findViewById(R.id.button_Behavioral);
         toBehavioralLayout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), QuestionDisplay.class);
+                Intent myIntent = new Intent(view.getContext(), BehavioralQuestion.class);
                 startActivityForResult(myIntent, 0);
             }
 
@@ -35,7 +34,7 @@ public class IndividualCompany extends AppCompatActivity {
         ImageButton toTechnicalLayout = (ImageButton) findViewById(R.id.button_Technical);
         toTechnicalLayout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), QuestionDisplay.class);
+                Intent myIntent = new Intent(view.getContext(), TechnicalQuestion.class);
                 startActivityForResult(myIntent, 0);
             }
 

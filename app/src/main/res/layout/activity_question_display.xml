@@ -5,17 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/background"
     tools:context="twanwatanakool.elevatorpitches.QuestionDisplay">
 
     <LinearLayout
-        android:id="@+id/PrepTimeBar"
+        android:id="@+id/QALayout"
         android:orientation="horizontal"
         android:layout_weight="10"
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
         <TextView
-            android:id="@+id/PrepTimeText"
+            android:id="@+id/InterviewText"
             android:text="Interview Q&amp;A"
             android:gravity="center"
             android:textSize="25dp"
@@ -39,10 +40,11 @@
         android:gravity="center">
 
         <TextView
-            android:id="@+id/QuestionText"
-            android:text="Question is..."
+            android:id="@+id/DisplayQuestionText"
             android:fontFamily="sans-serif-condensed"
+            android:text="Question..."
             android:textSize="20dp"
+            android:layout_margin="20dp"
             android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,17 +57,19 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:background="@color/background"
         android:gravity="center">
 
         <Button
-            android:id="@+id/AnswerText"
+            android:id="@+id/DisplayAnswerText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/transparent"
-            android:textSize="16dp"
+            android:textSize="18dp"
             android:textColor="@color/darkGray"
             android:layout_gravity="center"
-            android:text="Tap here to view answer"/>
+            android:text="Tap here to view answer"
+            style="?android:attr/borderlessButtonStyle"/>
 
     </LinearLayout>
 

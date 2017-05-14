@@ -6,5 +6,7 @@
     <color name="black">#000000</color>
     <color name="gray">#dedede</color>
     <color name="darkGray">#828282</color>
-    <color name="transparent">#80000</color>
+    <color name="transparent">#FFFFFF</color>
+    <color name="background">#FFFFFF</color>
+
 </resources>
