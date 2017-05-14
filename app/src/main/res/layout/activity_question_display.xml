@@ -33,7 +33,7 @@
 
     <LinearLayout
         android:id="@+id/QuestionLayout"
-        android:layout_weight="40"
+        android:layout_weight="80"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -51,6 +51,7 @@
             />
     </LinearLayout>
 
+    <!--
     <LinearLayout
         android:id="@+id/AnswerLayout"
         android:layout_weight="40"
@@ -70,8 +71,8 @@
             android:layout_gravity="center"
             android:text="Tap here to view answer"
             style="?android:attr/borderlessButtonStyle"/>
-
     </LinearLayout>
+    -->
 
     <View
         android:id="@+id/separator"
@@ -97,6 +98,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
+            <!--
                 <Button
                     android:id="@+id/EditAnswerButton"
                     android:text="Edit Answer"
@@ -112,6 +114,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"/>
+            -->
             </RelativeLayout>
 
             <RelativeLayout

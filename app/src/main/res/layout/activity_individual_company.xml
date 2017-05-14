@@ -11,9 +11,7 @@
     <RelativeLayout
         android:id="@+id/CompanyTasks"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="90"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/CompanyNameBar"
@@ -27,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:gravity="center"
-                android:text="COMPANY 1"
+                android:text="COMPANY"
                 android:textColor="@color/colorPrimary"
                 android:textSize="25dp"
                 android:textStyle="bold" />

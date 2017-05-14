@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
+import twanwatanakool.elevatorpitches.Questions.InterviewQuestions;
 
 public class IndividualCompany extends AppCompatActivity {
 
@@ -48,6 +51,24 @@ public class IndividualCompany extends AppCompatActivity {
             }
 
         });
+
+
+        updateCompanyName();
+
+
+    }
+
+    public void updateCompanyName() {
+        final TextView changeCompany = (TextView) findViewById(R.id.CompanyName);
+
+        Bundle extras = getIntent().getExtras();
+        String str = extras.getString("compName");
+
+        if(str == null) {
+            changeCompany.setText("COMPANY");
+        } else {
+            changeCompany.setText(str);
+        }
     }
 
 }
