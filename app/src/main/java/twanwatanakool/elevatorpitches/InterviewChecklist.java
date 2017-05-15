@@ -7,16 +7,20 @@ import android.widget.Button;
 import android.content.Intent;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.TextView;
 
 import java.util.Map;
 
 public class InterviewChecklist extends AppCompatActivity {
     private String PREF_NAME = "checkPref";
+    private CheckBox cb1, cb2, cb3, cb4, cb5, cb6, cb7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interview_checklist);
+
+        updateStatus();
 
         //Auto-populate Checkboxes
         retrieveFromPreference();
@@ -28,6 +32,7 @@ public class InterviewChecklist extends AppCompatActivity {
                 startActivityForResult(myIntent, 0);
 
                 saveCheckBoxStates();
+                updateStatus();
             }
 
         });
@@ -36,11 +41,12 @@ public class InterviewChecklist extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         saveCheckBoxStates();
+        updateStatus();
         super.onBackPressed();
     }
 
+    // HELPER METHOD - sends checked state to SharedPreferences
     public void saveCheckBoxStates() {
-        CheckBox cb1, cb2, cb3, cb4, cb5, cb6, cb7;
 
         cb1 = (CheckBox) findViewById(R.id.ApplyCheckBox);
         cb2 = (CheckBox) findViewById(R.id.SetUpCheckBox);
@@ -50,7 +56,6 @@ public class InterviewChecklist extends AppCompatActivity {
         cb6 = (CheckBox) findViewById(R.id.FollowUpCheckBox);
         cb7 = (CheckBox) findViewById(R.id.ThanksCheckBox);
 
-        //Store checkbox state
         saveToPreferences("cb1", cb1.isChecked());
         saveToPreferences("cb2", cb2.isChecked());
         saveToPreferences("cb3", cb3.isChecked());
@@ -65,6 +70,26 @@ public class InterviewChecklist extends AppCompatActivity {
         SharedPreferences.Editor editor = getSharedPreferences(PREF_NAME, MODE_PRIVATE).edit();
         editor.putString(s, ""+b);
         editor.commit();
+    }
+
+    // HELPER METHOD -  Update StatusText in XML
+    public void updateStatus() {
+        int update = 0;
+        SharedPreferences prefs = this.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+        Map<String, ?> keys = prefs.getAll();
+
+        for(Map.Entry<String, ?> entry : keys.entrySet()) {
+            if(entry.getValue().equals("true")) {
+                update++;
+            }
+        }
+
+        final TextView status = (TextView) findViewById(R.id.StatusText);
+        if(update == 7) {
+            status.setText("COMPLETED.");
+        } else {
+            status.setText(status.getText());
+        }
     }
 
     // HELPER METHOD - Autopopulate data from SharedPreferences File to activity

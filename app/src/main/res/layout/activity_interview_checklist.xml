@@ -139,7 +139,7 @@
 
         <TextView
             android:id="@+id/StatusText"
-            android:text="STATUS"
+            android:text="IN PROGRESS..."
             android:textSize="19dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="20dp"

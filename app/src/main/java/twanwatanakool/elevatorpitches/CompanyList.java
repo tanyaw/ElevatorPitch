@@ -68,13 +68,6 @@ public class CompanyList extends AppCompatActivity implements AdapterView.OnItem
         startActivityForResult(myIntent, 0);
     }
 
-    // HELPER METHOD - Clear all values stored in SharedPreferences File
-    public void clearPref() {
-        SharedPreferences.Editor editor = this.getSharedPreferences(PREF_NAME, MODE_PRIVATE).edit();
-        editor.clear();
-        editor.commit();
-    }
-
     // HELPER METHOD - Store userInput to SharedPreferences File
     public void saveToPreferences(String userInput) {
         SharedPreferences.Editor editor = getSharedPreferences(PREF_NAME, MODE_PRIVATE).edit();
@@ -91,5 +84,12 @@ public class CompanyList extends AppCompatActivity implements AdapterView.OnItem
         for(Map.Entry<String, ?> entry : keys.entrySet()) {
             list.add(entry.getKey());
         }
+    }
+
+    // HELPER METHOD - Clear all values stored in SharedPreferences File
+    public void clearPref() {
+        SharedPreferences.Editor editor = this.getSharedPreferences(PREF_NAME, MODE_PRIVATE).edit();
+        editor.clear();
+        editor.commit();
     }
 }
