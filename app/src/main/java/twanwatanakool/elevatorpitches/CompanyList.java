@@ -12,7 +12,6 @@ import android.widget.ListView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -68,63 +67,6 @@ public class CompanyList extends AppCompatActivity implements AdapterView.OnItem
         myIntent.putExtra("compName", compName);
         startActivityForResult(myIntent, 0);
     }
-
-//    public void saveToPreferences(String userInput) {
-//        SharedPreferences.Editor editor = getSharedPreferences("PrefValues.txt", MODE_PRIVATE).edit();
-//
-//        //SharedPreferences getSize = this.getSharedPreferences("InitLaunch.txt", MODE_PRIVATE);
-//        //SharedPreferences.Editor sizeEditor = getSharedPreferences("InitLaunch.txt", MODE_PRIVATE).edit();
-//
-//        //Get key
-//        //int key = getSize.getInt("size", -1);
-//
-//        //if(key == -1) {
-//        //    Log.d("ERROR", "There is an error with key");
-//        //} else {
-//            //Add data
-//            //key++;
-//            //editor.putString("" + key, userInput);
-//            //sizeEditor.putInt("size", key);
-//
-//            //Commit changes
-//            editor.putString("Comp1", userInput);
-//            editor.commit();
-//            //sizeEditor.commit();
-//        //}
-//    }
-//
-//    public void retrieveFromPreference() {
-//        SharedPreferences prefs = this.getSharedPreferences("PrefValues.txt", MODE_PRIVATE);
-//        //SharedPreferences getSize = this.getSharedPreferences("InitLaunch.txt", MODE_PRIVATE);
-//
-//        //int key = getSize.getInt("size", -1);
-//
-//        //while(key > 0) {
-//            //Get companyName
-//            String compName = prefs.getString("comp1", "Company Name");
-//
-//            //Add companyName to listview
-//            list.add(compName);
-//        //}
-//    }
-//
-//    public void initPref() {
-//        final String PREFS_NAME = "InitLaunch.txt";
-//        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-//
-//        if (settings.getBoolean("my_first_time", true)) {
-//            //The app is being launched for first time
-//            Log.d("Comments", "First time");
-//
-//            //First time task
-//            SharedPreferences.Editor editor = getSharedPreferences(PREFS_NAME, MODE_PRIVATE).edit();
-//            editor.putInt("size", 0);
-//            editor.commit();
-//
-//            // record the fact that the app has been started at least once
-//            settings.edit().putBoolean("my_first_time", false).commit();
-//        }
-//    }
 
     // HELPER METHOD - Clear all values stored in SharedPreferences File
     public void clearPref() {

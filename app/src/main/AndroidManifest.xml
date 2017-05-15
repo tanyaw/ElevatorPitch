@@ -31,7 +31,6 @@
         <activity android:name=".InterviewChecklist" />
         <activity android:name=".IndividualCompany" />
         <activity android:name=".InterviewTips" />
-        <activity android:name=".QuestionDisplay" />
         <activity android:name=".BehavioralQuestion" />
         <activity android:name=".TechnicalQuestion" />
     </application>
