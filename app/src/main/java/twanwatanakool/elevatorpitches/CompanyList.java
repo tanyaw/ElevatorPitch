@@ -21,7 +21,7 @@ public class CompanyList extends AppCompatActivity implements AdapterView.OnItem
     private EditText editCompanyButton;
     private ListView lv;
     private String PREF_NAME = "MAY_ALL_UR_DATA_PERSIST.txt";
-    ArrayList<String> list = new ArrayList<>();;
+    ArrayList<String> list = new ArrayList<>();
     ArrayAdapter<String> adapter;
 
     @Override

@@ -10,16 +10,24 @@ import android.widget.TextView;
 import twanwatanakool.elevatorpitches.Questions.InterviewQuestions;
 
 public class IndividualCompany extends AppCompatActivity {
+    private String compName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_individual_company);
 
+        //Display Company Name
+        updateCompanyName();
+
         ImageButton toChecklistLayout = (ImageButton) findViewById(R.id.button_CheckList);
         toChecklistLayout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), InterviewChecklist.class);
+                startActivityForResult(myIntent, 0);
+
+                //Send companyName to next activity screen
+                myIntent.putExtra("compName", compName);
                 startActivityForResult(myIntent, 0);
             }
 
@@ -51,24 +59,18 @@ public class IndividualCompany extends AppCompatActivity {
             }
 
         });
-
-
-        updateCompanyName();
-
-
     }
 
     public void updateCompanyName() {
         final TextView changeCompany = (TextView) findViewById(R.id.CompanyName);
 
         Bundle extras = getIntent().getExtras();
-        String str = extras.getString("compName");
+        compName = extras.getString("compName");
 
-        if(str == null) {
+        if(compName == null) {
             changeCompany.setText("COMPANY");
         } else {
-            changeCompany.setText(str);
+            changeCompany.setText(compName);
         }
     }
-
 }
