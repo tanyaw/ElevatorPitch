@@ -3,11 +3,13 @@ package twanwatanakool.elevatorpitches;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.widget.Button;
 import android.content.Intent;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import android.util.Log;
 
 import java.util.Map;
 
@@ -23,17 +25,19 @@ public class InterviewChecklist extends AppCompatActivity {
 
         //Get compName for unique IDs
         Bundle extras = getIntent().getExtras();
+        compName = extras.getString("compName");
 
         if(compName == null) {
             compName = "";
-        } else {
-            compName = extras.getString("compName");
         }
 
-        initCheckboxes();
-        updateStatus2();
+        Log.d("TANYA", "compName: " + compName);
 
-        //Auto-populate Checkboxes
+        //Set xml status text
+        updateStatus();
+
+        //Initialize and Auto-populate Checkboxes
+        initCheckboxes();
         retrieveFromPreference2();
 
         Button toInterviewTips = (Button) findViewById(R.id.GoToTipsButton);
@@ -49,7 +53,7 @@ public class InterviewChecklist extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        saveCheckBoxStates();
+        saveCheckBoxStates2();
         super.onBackPressed();
     }
 
@@ -206,7 +210,7 @@ public class InterviewChecklist extends AppCompatActivity {
             String key = entry.getKey();
 
             if (key.contains(compName)) {
-                if (key.contains(compName) && key.contains("cb1")) {
+                if (key.contains("cb1")) {
                     if (entry.getValue().equals("true")) {
                         cb1.setChecked(true);
                     }
@@ -216,7 +220,7 @@ public class InterviewChecklist extends AppCompatActivity {
                     }
                 }
 
-                if (key.contains(compName) && key.contains("cb2")) {
+                if (key.contains("cb2")) {
                     if (entry.getValue().equals("true")) {
                         cb2.setChecked(true);
                     }
@@ -226,7 +230,7 @@ public class InterviewChecklist extends AppCompatActivity {
                     }
                 }
 
-                if (key.contains(compName) && key.contains("cb3")) {
+                if (key.contains("cb3")) {
                     if (entry.getValue().equals("true")) {
                         cb3.setChecked(true);
                     }
@@ -236,7 +240,7 @@ public class InterviewChecklist extends AppCompatActivity {
                     }
                 }
 
-                if (key.contains(compName) && key.contains("cb4")) {
+                if (key.contains("cb4")) {
                     if (entry.getValue().equals("true")) {
                         cb4.setChecked(true);
                     }
@@ -246,7 +250,7 @@ public class InterviewChecklist extends AppCompatActivity {
                     }
                 }
 
-                if (key.contains(compName) && key.contains("cb5")) {
+                if (key.contains("cb5")) {
                     if (entry.getValue().equals("true")) {
                         cb5.setChecked(true);
                     }
@@ -256,7 +260,7 @@ public class InterviewChecklist extends AppCompatActivity {
                     }
                 }
 
-                if (key.contains(compName) && key.contains("cb6")) {
+                if (key.contains("cb6")) {
                     if (entry.getValue().equals("true")) {
                         cb6.setChecked(true);
                     }
@@ -266,7 +270,7 @@ public class InterviewChecklist extends AppCompatActivity {
                     }
                 }
 
-                if (key.contains(compName) && key.contains("cb7")) {
+                if (key.contains("cb7")) {
                     if (entry.getValue().equals("true")) {
                         cb7.setChecked(true);
                     }
