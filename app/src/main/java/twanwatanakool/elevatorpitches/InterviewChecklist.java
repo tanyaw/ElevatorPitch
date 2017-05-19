@@ -27,8 +27,8 @@ public class InterviewChecklist extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         compName = extras.getString("compName");
 
-        if(compName == null) {
-            compName = "";
+        if(compName == null){
+            Log.d("TANYA","compName is null");
         }
 
         Log.d("TANYA", "compName: " + compName);

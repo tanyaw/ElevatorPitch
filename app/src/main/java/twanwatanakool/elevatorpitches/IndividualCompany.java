@@ -70,8 +70,10 @@ public class IndividualCompany extends AppCompatActivity {
         compName = extras.getString("compName");
 
         if(compName == null) {
+            //Set company text to default value
             changeCompany.setText("COMPANY");
         } else {
+            //Set company text to userInput
             changeCompany.setText(compName);
         }
     }

@@ -160,7 +160,6 @@
                 android:textSize="16dp"
                 android:textColor="@color/black" />
         </RelativeLayout>
-
     </RelativeLayout>
 
 </LinearLayout>

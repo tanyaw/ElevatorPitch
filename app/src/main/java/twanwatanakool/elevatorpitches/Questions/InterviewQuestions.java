@@ -4,21 +4,69 @@ package twanwatanakool.elevatorpitches.Questions;
  * Created by twanwatanakool on 5/13/17.
  */
 
+import android.content.Context;
+import android.content.res.AssetManager;
+import android.util.Log;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
-import java.util.Set;
 import java.util.Random;
 
+
+
 public class InterviewQuestions {
-    Map<Integer, String> techQuestions;
-    Map<Integer, String> behaviorQuestions;
+    private ArrayList<String> techQuestionList = new ArrayList<>();
+
+    private Map<Integer, String> techQuestions = new HashMap<>();
+    private Map<Integer, String> behaviorQuestions = new HashMap<>();
+    private Context context;
+
+
+    public InterviewQuestions(Context myContext) {
+        this.context = myContext;
+        setTechQuestions2();
+        setBehaviorQuestions();
+    }
 
     public InterviewQuestions() {
-        techQuestions = new HashMap<Integer, String>();
-        behaviorQuestions = new HashMap<Integer, String>();
-
         setTechQuestions();
         setBehaviorQuestions();
+    }
+
+    public void setTechQuestions2() {
+        BufferedReader in = null;
+        try {
+            AssetManager assetManager = context.getAssets();
+            InputStream is =  assetManager.open("techQuestions.txt");
+            Reader reader = new InputStreamReader(is);
+            in = new BufferedReader(reader);
+
+            String line;
+            while((line = in.readLine()) != null) {
+                //OKAY U ARE STORING
+                Log.d("TANYA", "line: " + line);
+                techQuestionList.add(line);
+            }
+            Log.d("TANYA", "Finish this method");
+        } catch (IOException e) {
+            Log.d("Error", "This file does not exist");
+        } finally {
+            if (in != null) {
+                try {
+                    in.close();
+                    Log.d("TANYA", "Can i close reader?");
+                } catch (IOException e){
+                    Log.e("Error", "mermerm");
+                }
+            }
+            Log.d("TANYA", "Can i get out of finally?");
+        }
     }
 
     public void setTechQuestions() {
@@ -59,6 +107,16 @@ public class InterviewQuestions {
 
     public void setBehaveAnswer(int q, String a) {
         behaviorQuestions.put(q,a);
+    }
+
+    public String getTechQuestion2() {
+        if(techQuestionList.isEmpty()) {
+            return null;
+        } else {
+            Random rand = new Random();
+            int randIndex = rand.nextInt((techQuestionList.size()-1));
+            return techQuestionList.get(randIndex);
+        }
     }
 
     public String getTechQuestion() {
