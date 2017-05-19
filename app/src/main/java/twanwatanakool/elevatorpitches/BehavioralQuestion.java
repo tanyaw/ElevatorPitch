@@ -27,8 +27,8 @@ public class BehavioralQuestion extends AppCompatActivity {
 
     public void updateQuestion() {
         final TextView changeQuestion = (TextView) findViewById(R.id.DisplayQuestionText);
-        final InterviewQuestions db = new InterviewQuestions();
-        String q = db.getBehaveQuestion();
+        final InterviewQuestions db = new InterviewQuestions(this);
+        String q = db.getBehaviorQuestion();
 
         if(q ==null) {
             changeQuestion.setText("There are currently no questions in the database.");
