@@ -43,6 +43,7 @@ public class CompanyList extends AppCompatActivity implements AdapterView.OnItem
                 adapter.add(userInput);
                 saveToPreferences(userInput);
 
+                //Clear text in edit text widget
                 editCompanyButton.setText(null);
             } else {
                 Toast.makeText(CompanyList.this, "Please enter a company name!", Toast.LENGTH_SHORT).show();
@@ -50,7 +51,7 @@ public class CompanyList extends AppCompatActivity implements AdapterView.OnItem
             }
         });
 
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, list);
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_expandable_list_item_1, list);
 
         lv = (ListView) findViewById(R.id.companiesListView);
         lv.setAdapter(adapter);

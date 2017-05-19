@@ -27,7 +27,7 @@ public class SplashScreen extends Activity {
                 Intent i = new Intent(SplashScreen.this, CompanyList.class);
                 startActivity(i);
 
-                // close this activity
+                // Close this activity
                 finish();
             }
         }, SPLASH_TIME_OUT);

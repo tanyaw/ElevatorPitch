@@ -6,9 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.util.Log;
-
-import twanwatanakool.elevatorpitches.Questions.InterviewQuestions;
 
 public class IndividualCompany extends AppCompatActivity {
     private String compName;
@@ -30,7 +27,7 @@ public class IndividualCompany extends AppCompatActivity {
                 //Send companyName to next activity screen
                 myIntent.putExtra("compName", compName);
                 startActivityForResult(myIntent, 0);
-                Log.d("TANYA", "Indiv compName: " + compName);
+                //Log.d("TANYA", "Indiv compName: " + compName);
             }
 
         });

@@ -3,7 +3,6 @@ package twanwatanakool.elevatorpitches;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.widget.Button;
 import android.content.Intent;
 import android.view.View;
@@ -28,10 +27,10 @@ public class InterviewChecklist extends AppCompatActivity {
         compName = extras.getString("compName");
 
         if(compName == null){
-            Log.d("TANYA","compName is null");
+            Log.d("ERROR","compName is null");
         }
 
-        Log.d("TANYA", "compName: " + compName);
+        //Log.d("TANYA", "compName: " + compName);
 
         //Set xml status text
         updateStatus();
