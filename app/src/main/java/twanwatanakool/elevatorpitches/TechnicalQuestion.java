@@ -15,12 +15,27 @@ public class TechnicalQuestion extends AppCompatActivity {
         setContentView(R.layout.activity_question_display);
 
         Button nextQuestion = (Button) findViewById(R.id.NextQuestionButton);
-
         nextQuestion.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                updateQuestion();
+            public void onClick(View view) {updateQuestion();
             }
         });
+
+
+//        Button showAnswer = (Button) findViewById(R.id.DisplayAnswerText);
+//        showAnswer.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                final TextView displayAnswer = (TextView) findViewById(R.id.DisplayAnswerText);
+//                final InterviewQuestions db = new InterviewQuestions(this);
+//                String a = db.getBehaveAnswer();
+//
+//                if(a == null) {
+//                    //EDIT TEXT BUTTON appear
+//                } else {
+//                    displayAnswer.setText(a);
+//                }
+//            }
+//        });
     }
 
     public void updateQuestion() {

@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/background"
-    tools:context="twanwatanakool.elevatorpitches.QuestionDisplay">
+    android:background="@color/background">
 
     <LinearLayout
         android:id="@+id/QALayout"
@@ -33,7 +30,7 @@
 
     <LinearLayout
         android:id="@+id/QuestionLayout"
-        android:layout_weight="80"
+        android:layout_weight="40"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -51,7 +48,6 @@
             />
     </LinearLayout>
 
-    <!--
     <LinearLayout
         android:id="@+id/AnswerLayout"
         android:layout_weight="40"
@@ -72,7 +68,6 @@
             android:text="Tap here to view answer"
             style="?android:attr/borderlessButtonStyle"/>
     </LinearLayout>
-    -->
 
     <View
         android:id="@+id/separator"

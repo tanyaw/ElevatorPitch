@@ -8,5 +8,6 @@
     <color name="darkGray">#828282</color>
     <color name="transparent">#FFFFFF</color>
     <color name="background">#FFFFFF</color>
+    <color name="groupBackground">#f7f7f8</color>
 
 </resources>

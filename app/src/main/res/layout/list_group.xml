@@ -8,6 +8,7 @@
         android:fontFamily="sans-serif-condensed"
         android:textColor="@android:color/black"
         android:textSize="20dp"
+        android:background="@color/groupBackground"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
