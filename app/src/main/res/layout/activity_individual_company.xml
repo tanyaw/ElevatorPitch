@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/background"
-    tools:context="twanwatanakool.elevatorpitches.IndividualCompany" >
+    tools:context="twanwatanakool.elevatorpitch1.IndividualCompany" >
 
     <LinearLayout
         android:id="@+id/CompanyNameBar"

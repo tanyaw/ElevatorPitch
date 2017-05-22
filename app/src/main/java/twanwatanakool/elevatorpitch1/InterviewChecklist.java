@@ -1,4 +1,4 @@
-package twanwatanakool.elevatorpitches;
+package twanwatanakool.elevatorpitch1;
 
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
@@ -8,14 +8,13 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
-import android.util.Log;
 
 import java.util.Map;
 
 public class InterviewChecklist extends AppCompatActivity {
     private String PREF_NAME = "checkPref";
     private CheckBox cb1, cb2, cb3, cb4, cb5, cb6, cb7;
-    private String compName;
+    public static String compName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,17 +22,18 @@ public class InterviewChecklist extends AppCompatActivity {
         setContentView(R.layout.activity_interview_checklist);
 
         //Get compName for unique IDs
-        Bundle extras = getIntent().getExtras();
-        compName = extras.getString("compName");
+       // Bundle bundle = getIntent().getExtras();
 
-        if(compName == null){
-            Log.d("ERROR","compName is null");
-        }
+//        if(bundle != null){
+//            compName = bundle.getString("compName");
+//
+//        } else {
+//            Log.d("ERROR","compName is null");
+//        }
 
-        //Log.d("TANYA", "compName: " + compName);
 
         //Set xml status text
-        updateStatus();
+        updateStatus2();
 
         //Initialize and Auto-populate Checkboxes
         initCheckboxes();

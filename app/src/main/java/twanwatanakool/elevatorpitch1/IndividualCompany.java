@@ -1,4 +1,4 @@
-package twanwatanakool.elevatorpitches;
+package twanwatanakool.elevatorpitch1;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -22,10 +22,11 @@ public class IndividualCompany extends AppCompatActivity {
         toChecklistLayout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), InterviewChecklist.class);
-                startActivityForResult(myIntent, 0);
+                //startActivityForResult(myIntent, 0);
 
                 //Send companyName to next activity screen
                 myIntent.putExtra("compName", compName);
+                InterviewChecklist.compName = compName;
                 startActivityForResult(myIntent, 0);
                 //Log.d("TANYA", "Indiv compName: " + compName);
             }

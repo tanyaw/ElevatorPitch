@@ -1,4 +1,4 @@
-package twanwatanakool.elevatorpitches.Questions;
+package twanwatanakool.elevatorpitch1.Questions;
 
 /**
  * Created by twanwatanakool on 5/13/17.
@@ -16,17 +16,32 @@ import java.io.Reader;
 import java.util.ArrayList;
 import java.util.Random;
 
-
-
 public class InterviewQuestions {
     private ArrayList<String> techQuestionList = new ArrayList<>();
     private ArrayList<String> behaviorQuestionList = new ArrayList<>();
+    private ArrayList<String> techAnswerList = new ArrayList<>();
+    private ArrayList<String> behaviorAnswerList = new ArrayList<>();
     private Context context;
 
     public InterviewQuestions(Context myContext) {
         this.context = myContext;
         setTechQuestions();
         setBehaviorQuestions();
+
+        initTechAnswers();
+        initBehaviorAnswers();
+    }
+
+    public void initTechAnswers() {
+        for(int i=0; i < this.getTechSize(); i++) {
+            techAnswerList.add(null);
+        }
+    }
+
+    public void initBehaviorAnswers() {
+        for(int i=0; i < this.getBehaviorSize(); i++) {
+            behaviorAnswerList.add(null);
+        }
     }
 
     public void setBehaviorQuestions() {
@@ -79,12 +94,10 @@ public class InterviewQuestions {
         }
     }
 
-    public String getTechQuestion() {
+    public String getTechQuestion(int randIndex) {
         if(techQuestionList.isEmpty()) {
             return null;
         } else {
-            Random rand = new Random();
-            int randIndex = rand.nextInt((techQuestionList.size()-1));
             return techQuestionList.get(randIndex);
         }
     }
@@ -99,22 +112,34 @@ public class InterviewQuestions {
         }
     }
 
-    //NOT IMPLEMENTED YET HAHAHAH
-    public void setTechAnswer(int q, String a) {
-
+    public int getTechSize() {
+        return techQuestionList.size();
     }
 
-    public void setBehaveAnswer(int q, String a) {
-
+    public int getBehaviorSize() {
+        return behaviorQuestionList.size();
     }
 
-    public String getTechAnswer(int q) {
-
-        return null;
+    public String getTechAnswer(int index) {
+        if(techAnswerList.isEmpty()) {
+            return null;
+        } else {
+            return techAnswerList.get(index);
+        }
     }
 
-    public String getBehaveAnswer(int q) {
-
-        return null;
+    public String getBehaveAnswer(int index) {
+        if(behaviorAnswerList.isEmpty()) {
+            return null;
+        } else {
+            return behaviorAnswerList.get(index);
+        }
     }
+
+    public void setTechAnswer(int index, String s) {
+        techAnswerList.set(index, s);
+        Log.d("TANYA", "Storing: " + s);
+    }
+
+    public void setBehaveAnswer(int index, String s) { behaviorAnswerList.set(index, s); }
 }

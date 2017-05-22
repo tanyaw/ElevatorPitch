@@ -6,7 +6,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:background="@color/background"
-    tools:context="twanwatanakool.elevatorpitches.CompanyList" >
+    tools:context="twanwatanakool.elevatorpitch1.CompanyList" >
 
     <LinearLayout
         android:id="@+id/CompanyListLayout"

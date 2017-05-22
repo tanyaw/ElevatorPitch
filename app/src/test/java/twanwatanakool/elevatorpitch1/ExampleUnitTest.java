@@ -1,4 +1,4 @@
-package twanwatanakool.elevatorpitches;
+package twanwatanakool.elevatorpitch1;
 
 import org.junit.Test;
 

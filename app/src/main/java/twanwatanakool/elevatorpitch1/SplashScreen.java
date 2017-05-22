@@ -1,4 +1,4 @@
-package twanwatanakool.elevatorpitches;
+package twanwatanakool.elevatorpitch1;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,7 +16,7 @@ public class SplashScreen extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(twanwatanakool.elevatorpitches.R.layout.activity_splash_screen);
+        setContentView(twanwatanakool.elevatorpitch1.R.layout.activity_splash_screen);
 
         new Handler().postDelayed(new Runnable() {
 

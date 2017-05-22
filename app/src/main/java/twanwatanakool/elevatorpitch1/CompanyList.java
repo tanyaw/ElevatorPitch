@@ -1,4 +1,4 @@
-package twanwatanakool.elevatorpitches;
+package twanwatanakool.elevatorpitch1;
 
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
@@ -66,6 +66,7 @@ public class CompanyList extends AppCompatActivity implements AdapterView.OnItem
         String compName = list.get(position);
         Intent myIntent = new Intent(v.getContext(), IndividualCompany.class);
         myIntent.putExtra("compName", compName);
+
         startActivityForResult(myIntent, 0);
     }
 

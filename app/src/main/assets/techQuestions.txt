@@ -1,24 +1,24 @@
 What is Polymorphism?
-What is the Singleton Design Pattern?
-What is Inheritance?
-Reverse a string.
+Write a method to reverse a string.
 Given a dictionary of words and a String of user's input. Create a function to produce all possible auto-completions of the given string.
 On a scale of 1-10, how would you rate your expertise on your best programming language and why?
 What sorting algorithms do you know? Implement one of them.
-Reverse a linked list recursively. Don't use temp variables.
+Write a method to reverse a linked list recursively. Don't use temp variables.
 Implement a Queue using two Stacks.
 What is your favorite data structure? When would that data structure be an inefficient choice?
 What is the difference between passing by reference and passing by value?
 Using OOP design patterns, create an online shopping cart system.
-Using OOP design patterns, create an ATM system.
 What is the difference between interfaces and abstract classes?
 Determine if a string has all unique characters. Don't use additional data structures.
+What is the Singleton Design Pattern?
 Remove duplicates from an unsorted linked list.
 Write fibonacci sequence using dymanic programming.
 Determine if a linked list is circular.
-Return the height of a tree.
+Write a method to return the height of a tree.
 Perform pre, in, and post-order Tree traversals.
 Merge two sorted linked list of integers. Analyze runtime complexity.
 What sort would you use if you required tight max time bounds and wanted highly regular performance.
 Write a method to decide if the given binary tree is a binary search tree or not.
 Determine if two strings are anagrams.
+What is Inheritance?
+Using OOP design patterns, create an ATM system.

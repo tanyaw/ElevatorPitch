@@ -1,4 +1,4 @@
-package twanwatanakool.elevatorpitches;
+package twanwatanakool.elevatorpitch1;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
