@@ -22,12 +22,11 @@ public class IndividualCompany extends AppCompatActivity {
         toChecklistLayout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), InterviewChecklist.class);
-                //startActivityForResult(myIntent, 0);
 
                 //Send companyName to next activity screen
                 myIntent.putExtra("compName", compName);
                 InterviewChecklist.compName = compName;
-                startActivityForResult(myIntent, 0);
+                startActivity(myIntent);
                 //Log.d("TANYA", "Indiv compName: " + compName);
             }
 
@@ -37,7 +36,7 @@ public class IndividualCompany extends AppCompatActivity {
         toBehavioralLayout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), BehavioralQuestion.class);
-                startActivityForResult(myIntent, 0);
+                startActivity(myIntent);
             }
 
         });
@@ -46,7 +45,7 @@ public class IndividualCompany extends AppCompatActivity {
         toTechnicalLayout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), TechnicalQuestion.class);
-                startActivityForResult(myIntent, 0);
+                startActivity(myIntent);
             }
 
         });
@@ -55,7 +54,7 @@ public class IndividualCompany extends AppCompatActivity {
         toTipsLayout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), InterviewTips.class);
-                startActivityForResult(myIntent, 0);
+                startActivity(myIntent);
             }
 
         });

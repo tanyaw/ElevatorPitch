@@ -22,8 +22,7 @@ public class InterviewChecklist extends AppCompatActivity {
         setContentView(R.layout.activity_interview_checklist);
 
         //Get compName for unique IDs
-       // Bundle bundle = getIntent().getExtras();
-
+//        Bundle bundle = getIntent().getExtras();
 //        if(bundle != null){
 //            compName = bundle.getString("compName");
 //
@@ -33,26 +32,25 @@ public class InterviewChecklist extends AppCompatActivity {
 
 
         //Set xml status text
-        updateStatus2();
+        updateStatus();
 
         //Initialize and Auto-populate Checkboxes
         initCheckboxes();
-        retrieveFromPreference2();
+        retrieveFromPreference();
 
         Button toInterviewTips = (Button) findViewById(R.id.GoToTipsButton);
         toInterviewTips.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), InterviewTips.class);
-                startActivityForResult(myIntent, 0);
-
-                saveCheckBoxStates2();
+                startActivity(myIntent);
+                saveCheckBoxStates();
             }
         });
     }
 
     @Override
     public void onBackPressed() {
-        saveCheckBoxStates2();
+        saveCheckBoxStates();
         super.onBackPressed();
     }
 
@@ -67,20 +65,7 @@ public class InterviewChecklist extends AppCompatActivity {
         cb7 = (CheckBox) findViewById(R.id.ThanksCheckBox);
     }
 
-    // HELPER METHOD - sends checked state to SharedPreferences
     public void saveCheckBoxStates() {
-        saveToPreferences("cb1", cb1.isChecked());
-        saveToPreferences("cb2", cb2.isChecked());
-        saveToPreferences("cb3", cb3.isChecked());
-        saveToPreferences("cb4", cb4.isChecked());
-        saveToPreferences("cb5", cb5.isChecked());
-        saveToPreferences("cb6", cb6.isChecked());
-        saveToPreferences("cb7", cb7.isChecked());
-
-        updateStatus();
-    }
-
-    public void saveCheckBoxStates2() {
         saveToPreferences(compName+"cb1", cb1.isChecked());
         saveToPreferences(compName+"cb2", cb2.isChecked());
         saveToPreferences(compName+"cb3", cb3.isChecked());
@@ -89,7 +74,7 @@ public class InterviewChecklist extends AppCompatActivity {
         saveToPreferences(compName+"cb6", cb6.isChecked());
         saveToPreferences(compName+"cb7", cb7.isChecked());
 
-        updateStatus2();
+        updateStatus();
     }
 
     // HELPER METHOD - Store userInput to SharedPreferences File
@@ -99,27 +84,7 @@ public class InterviewChecklist extends AppCompatActivity {
         editor.commit();
     }
 
-    // HELPER METHOD -  Update StatusText in XML
     public void updateStatus() {
-        int update = 0;
-        SharedPreferences prefs = this.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
-        Map<String, ?> keys = prefs.getAll();
-
-        for(Map.Entry<String, ?> entry : keys.entrySet()) {
-            if(entry.getValue().equals("true")) {
-                update++;
-            }
-        }
-
-        final TextView status = (TextView) findViewById(R.id.StatusText);
-        if(update == 7) {
-            status.setText("COMPLETED.");
-        } else {
-            status.setText(status.getText());
-        }
-    }
-
-    public void updateStatus2() {
         int update = 0;
         SharedPreferences prefs = this.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
         Map<String, ?> keys = prefs.getAll();
@@ -138,70 +103,8 @@ public class InterviewChecklist extends AppCompatActivity {
         }
     }
 
-    // HELPER METHOD - Autopopulate data from SharedPreferences File to activity
-    public void retrieveFromPreference() {
-        SharedPreferences prefs = this.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
-        Map<String, ?> keys = prefs.getAll();
-
-        for(Map.Entry<String, ?> entry : keys.entrySet()) {
-            String key = entry.getKey();
-
-            if(entry.getValue().equals("true")) {
-                switch (key) {
-                    case "cb1":
-                        cb1.setChecked(true);
-                        break;
-                    case "cb2":
-                        cb2.setChecked(true);
-                        break;
-                    case "cb3":
-                        cb3.setChecked(true);
-                        break;
-                    case "cb4":
-                        cb4.setChecked(true);
-                        break;
-                    case "cb5":
-                        cb5.setChecked(true);
-                        break;
-                    case "cb6":
-                        cb6.setChecked(true);
-                        break;
-                    case "cb7":
-                        cb7.setChecked(true);
-                        break;
-                }
-            }
-
-            else if(entry.getValue().equals("false")) {
-                switch (key) {
-                    case "cb1":
-                        cb1.setChecked(false);
-                        break;
-                    case "cb2":
-                        cb2.setChecked(false);
-                        break;
-                    case "cb3":
-                        cb3.setChecked(false);
-                        break;
-                    case "cb4":
-                        cb4.setChecked(false);
-                        break;
-                    case "cb5":
-                        cb5.setChecked(false);
-                        break;
-                    case "cb6":
-                        cb6.setChecked(false);
-                        break;
-                    case "cb7":
-                        cb7.setChecked(false);
-                        break;
-                }
-            }
-        }
-    }
-
     // HELPER METHOD - Auto-populate data from SharedPreferences to activity
-    public void retrieveFromPreference2() {
+    public void retrieveFromPreference() {
         SharedPreferences prefs = this.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
         Map<String, ?> keys = prefs.getAll();
 

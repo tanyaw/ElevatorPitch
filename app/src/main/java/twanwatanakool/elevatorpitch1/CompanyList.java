@@ -66,8 +66,7 @@ public class CompanyList extends AppCompatActivity implements AdapterView.OnItem
         String compName = list.get(position);
         Intent myIntent = new Intent(v.getContext(), IndividualCompany.class);
         myIntent.putExtra("compName", compName);
-
-        startActivityForResult(myIntent, 0);
+        startActivity(myIntent);
     }
 
     // HELPER METHOD - Store userInput to SharedPreferences File
