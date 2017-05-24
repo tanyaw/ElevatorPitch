@@ -94,6 +94,7 @@
         <ListView
             android:id="@+id/companiesListView"
             android:smoothScrollbar="true"
+            android:longClickable="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         </ListView>

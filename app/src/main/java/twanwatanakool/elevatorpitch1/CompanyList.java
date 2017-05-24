@@ -1,9 +1,12 @@
 package twanwatanakool.elevatorpitch1;
 
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View.OnClickListener;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -28,6 +31,7 @@ public class CompanyList extends AppCompatActivity implements AdapterView.OnItem
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_company_list);
+
 
         //Auto-populate
         retrieveFromPreference();
@@ -56,6 +60,26 @@ public class CompanyList extends AppCompatActivity implements AdapterView.OnItem
         lv = (ListView) findViewById(R.id.companiesListView);
         lv.setAdapter(adapter);
         lv.setOnItemClickListener(CompanyList.this);
+
+        lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                AlertDialog.Builder adb=new AlertDialog.Builder(CompanyList.this);
+                adb.setTitle("Delete?");
+                adb.setMessage("Are you sure you want to delete " + adapter.getItem(position));
+                final int positionToRemove = position;
+                adb.setNegativeButton("Cancel", null);
+                adb.setPositiveButton("Ok", new AlertDialog.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        removeFromPreferences(adapter.getItem(positionToRemove));
+                        adapter.remove(adapter.getItem(positionToRemove));
+                        adapter.notifyDataSetChanged();
+                    }});
+                adb.show();
+
+                return true;
+            }
+        });
     }
 
     @Override
@@ -69,7 +93,13 @@ public class CompanyList extends AppCompatActivity implements AdapterView.OnItem
         startActivity(myIntent);
     }
 
-    // HELPER METHOD - Store userInput to SharedPreferences File
+    public void removeFromPreferences(String userInput) {
+        SharedPreferences.Editor editor = getSharedPreferences(PREF_NAME, MODE_PRIVATE).edit();
+        editor.remove(userInput);
+        editor.commit();
+    }
+
+// HELPER METHOD - Store userInput to SharedPreferences File
     public void saveToPreferences(String userInput) {
         SharedPreferences.Editor editor = getSharedPreferences(PREF_NAME, MODE_PRIVATE).edit();
         editor.putString(userInput, userInput);

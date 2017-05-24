@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Credit to respective owners for icons:
+<div>Icons made by <a href="http://www.flaticon.com/authors/popcorns-arts" title="Icon Pond">Icon Pond</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+<div>Icons made by <a href="http://www.flaticon.com/authors/popcorns-arts" title="Icon Pond">Icon Pond</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -57,7 +66,7 @@
 
                 <ImageButton
                     android:id="@+id/button_CheckList"
-                    android:background="@drawable/checklist"
+                    android:background="@drawable/clipboard"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:scaleType="fitCenter" />
@@ -83,7 +92,7 @@
 
                 <ImageButton
                     android:id="@+id/button_Behavioral"
-                    android:background="@drawable/interviewicon"
+                    android:background="@drawable/behavior"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:scaleType="fitCenter" />
@@ -125,7 +134,7 @@
 
                 <ImageButton
                     android:id="@+id/button_Technical"
-                    android:background="@drawable/computer"
+                    android:background="@drawable/technical"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:scaleType="fitCenter" />
@@ -150,7 +159,7 @@
 
                 <ImageButton
                     android:id="@+id/button_Tips"
-                    android:background="@drawable/tips"
+                    android:background="@drawable/question"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:scaleType="fitCenter" />

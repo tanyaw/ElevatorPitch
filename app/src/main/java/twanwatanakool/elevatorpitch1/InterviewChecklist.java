@@ -37,15 +37,6 @@ public class InterviewChecklist extends AppCompatActivity {
         //Initialize and Auto-populate Checkboxes
         initCheckboxes();
         retrieveFromPreference();
-
-        Button toInterviewTips = (Button) findViewById(R.id.GoToTipsButton);
-        toInterviewTips.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), InterviewTips.class);
-                startActivity(myIntent);
-                saveCheckBoxStates();
-            }
-        });
     }
 
     @Override
