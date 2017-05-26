@@ -14,6 +14,7 @@ What is the Singleton Design Pattern?
 Remove duplicates from an unsorted linked list.
 Write fibonacci sequence using dymanic programming.
 Determine if a linked list is circular.
+What is the difference between a semaphore and mutex?
 Write a method to return the height of a tree.
 Perform pre, in, and post-order Tree traversals.
 Merge two sorted linked list of integers. Analyze runtime complexity.
@@ -22,3 +23,5 @@ Write a method to decide if the given binary tree is a binary search tree or not
 Determine if two strings are anagrams.
 What is Inheritance?
 Using OOP design patterns, create an ATM system.
+Remove duplicate chars from a string.
+Difference between TCP and UDP? When would you want to use one over the other?

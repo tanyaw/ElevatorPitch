@@ -16,23 +16,31 @@
             android:theme="@android:style/Theme.Black.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name="twanwatanakool.elevatorpitch1.CompanyList">
+        <activity android:name="twanwatanakool.elevatorpitch1.CompanyList"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="twanwatanakool.elevatorpitch1.InterviewChecklist" />
-        <activity android:name="twanwatanakool.elevatorpitch1.IndividualCompany" />
-        <activity android:name="twanwatanakool.elevatorpitch1.BehavioralQuestion" />
-        <activity android:name="twanwatanakool.elevatorpitch1.TechnicalQuestion" />
-        <activity android:name="twanwatanakool.elevatorpitch1.InterviewTips" />
+
+        <activity android:name="twanwatanakool.elevatorpitch1.InterviewChecklist"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="twanwatanakool.elevatorpitch1.IndividualCompany"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="twanwatanakool.elevatorpitch1.BehavioralQuestion"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="twanwatanakool.elevatorpitch1.TechnicalQuestion"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="twanwatanakool.elevatorpitch1.InterviewTips"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
