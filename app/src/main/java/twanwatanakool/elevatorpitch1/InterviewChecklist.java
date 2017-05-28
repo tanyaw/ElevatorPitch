@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import java.util.Map;
 
+//TODO 2. Put backend storing/retrieving in background threads using AsyncTask
+
 public class InterviewChecklist extends AppCompatActivity {
     private String PREF_NAME = "checkPref";
     private CheckBox cb1, cb2, cb3, cb4, cb5, cb6, cb7;

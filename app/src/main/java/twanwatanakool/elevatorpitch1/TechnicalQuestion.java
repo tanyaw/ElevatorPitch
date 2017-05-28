@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import twanwatanakool.elevatorpitch1.Questions.InterviewQuestions;
 
+//TODO 1. Implement Answer functionality by writing to file by using firebase or backendless
+
 public class TechnicalQuestion extends AppCompatActivity {
     private InterviewQuestions db;
     private int tKey = 0;    //index for arraylist
@@ -25,6 +27,7 @@ public class TechnicalQuestion extends AppCompatActivity {
         setContentView(R.layout.activity_question_display);
 
         db = new InterviewQuestions(this);
+        updateQuestion();
 
         //Make EditText/TextView temp disappear
 //        et1 = (EditText)findViewById(R.id.et1);

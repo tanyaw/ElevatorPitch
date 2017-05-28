@@ -19,9 +19,9 @@ public class BehavioralQuestion extends AppCompatActivity {
         setContentView(R.layout.activity_question_display);
 
         db = new InterviewQuestions(this);
+        updateQuestion();
 
         Button nextQuestion = (Button) findViewById(R.id.NextQuestionButton);
-
         nextQuestion.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 updateQuestion();

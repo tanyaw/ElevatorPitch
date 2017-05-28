@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+//TODO Optional - Link data structures to wikipedia pages
+
 public class InterviewTips extends AppCompatActivity {
 
     ExpandableListView expandableListView;

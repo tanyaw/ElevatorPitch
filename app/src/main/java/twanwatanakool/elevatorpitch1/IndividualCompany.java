@@ -27,7 +27,6 @@ public class IndividualCompany extends AppCompatActivity {
                 myIntent.putExtra("compName", compName);
                 InterviewChecklist.compName = compName;
                 startActivity(myIntent);
-                //Log.d("TANYA", "Indiv compName: " + compName);
             }
 
         });
